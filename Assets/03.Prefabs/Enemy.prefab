@@ -158,3 +158,5 @@ MonoBehaviour:
   _moveSpeed: 3
   _health: 100
   _hitStopTimer: 0
+  _knockBackPower: 1
+  _hitstop: {fileID: 0}

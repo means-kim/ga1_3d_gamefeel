@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _hitStopTimer = 0.2f;
     [SerializeField] private float _knockBackPower = 1f;
     private bool _isHit = false;
+    [SerializeField] private HitStop _hitstop;
     private void Start()
     {
         _player = GameObject.FindWithTag("Player");
@@ -48,7 +49,7 @@ public class Enemy : MonoBehaviour
         _health -= damage;
         Debug.Log($"체력 : {_health}");
 
-        // KnockBack();
+        _hitstop.ScreenStop();
 
         if (_health <= 0)
         {
@@ -68,7 +69,7 @@ public class Enemy : MonoBehaviour
     {
         if (_isHit)
         {
-            _currentTime += Time.deltaTime;
+            _currentTime += Time.unscaledDeltaTime;
             KnockBack();
             if (_currentTime >= _hitStopTimer)
             {
