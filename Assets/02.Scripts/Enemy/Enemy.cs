@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int _health = 100;
     private float _currentTime = 0f;
     [SerializeField] private float _hitStopTimer = 0.2f;
+    [SerializeField] private float _knockBackPower = 1f;
     private bool _isHit = false;
     private void Start()
     {
@@ -47,6 +48,8 @@ public class Enemy : MonoBehaviour
         _health -= damage;
         Debug.Log($"체력 : {_health}");
 
+        // KnockBack();
+
         if (_health <= 0)
         {
             Destroy(gameObject);
@@ -66,6 +69,7 @@ public class Enemy : MonoBehaviour
         if (_isHit)
         {
             _currentTime += Time.deltaTime;
+            KnockBack();
             if (_currentTime >= _hitStopTimer)
             {
                 _isHit = false;
@@ -73,5 +77,12 @@ public class Enemy : MonoBehaviour
                 return;
             }
         }
+    }
+
+    private void KnockBack()
+    {
+        Vector3 direction = transform.position - _player.transform.position;
+        direction.Normalize();
+        transform.Translate(direction * _knockBackPower * Time.deltaTime);
     }
 }
