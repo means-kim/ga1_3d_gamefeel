@@ -5,6 +5,9 @@ public class Enemy : MonoBehaviour
     private GameObject _player;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private int _health = 100;
+    private float _currentTime = 0f;
+    [SerializeField] private float _hitStopTimer = 0.2f;
+    private bool _isHit = false;
     private void Start()
     {
         _player = GameObject.FindWithTag("Player");
@@ -21,6 +24,19 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
+
+        HitStun();
+
+        if (_isHit)
+        {
+            return;
+        }
+        
+        Move();
+    }
+
+    private void Move()
+    {
         Vector3 direction = _player.transform.position - transform.position;
         direction.Normalize();
         transform.Translate(direction * _moveSpeed * Time.deltaTime);
@@ -34,6 +50,28 @@ public class Enemy : MonoBehaviour
         if (_health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Sword"))
+        {
+            _isHit = true;
+        }
+    }
+
+    private void HitStun()
+    {
+        if (_isHit)
+        {
+            _currentTime += Time.deltaTime;
+            if (_currentTime >= _hitStopTimer)
+            {
+                _isHit = false;
+                _currentTime = 0f;
+                return;
+            }
         }
     }
 }
