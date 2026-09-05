@@ -194,7 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   _animator: {fileID: -547150029759732115}
-  _damage: 20
 --- !u!1 &1899517297787176915
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +206,7 @@ GameObject:
   - component: {fileID: 3919690620655693530}
   - component: {fileID: 1821476175875870412}
   - component: {fileID: 8600311723443272701}
+  - component: {fileID: 6035660361743555843}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Sword
@@ -309,6 +309,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &6035660361743555843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899517297787176915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccc9a4bb50d54492bb346e2a28d007e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponHitBox
+  _damage: 20
 --- !u!1 &3118534241210237809
 GameObject:
   m_ObjectHideFlags: 0
