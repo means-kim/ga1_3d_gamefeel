@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
     {
         if (_isHit)
         {
-            _currentTime += Time.unscaledDeltaTime;
+            _currentTime += Time.deltaTime;
             KnockBack();
             if (_currentTime >= _hitStopTimer)
             {
