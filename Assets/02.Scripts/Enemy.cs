@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     private GameObject _player;
     [SerializeField] private float _moveSpeed;
+    [SerializeField] private int _health = 100;
     private void Start()
     {
         _player = GameObject.FindWithTag("Player");
@@ -23,5 +24,16 @@ public class Enemy : MonoBehaviour
         Vector3 direction = _player.transform.position - transform.position;
         direction.Normalize();
         transform.Translate(direction * _moveSpeed * Time.deltaTime);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        _health -= damage;
+        Debug.Log($"체력 : {_health}");
+
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
