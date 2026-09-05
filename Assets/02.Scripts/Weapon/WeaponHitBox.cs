@@ -2,13 +2,8 @@ using UnityEngine;
 
 public class WeaponHitBox : MonoBehaviour
 {
-    private PlayerAttack _playerAttack;
     [SerializeField] private int _damage;
-
-    public WeaponHitBox(PlayerAttack playerAttack)
-    {
-        _playerAttack = playerAttack;
-    }
+    [SerializeField] private PlayerAttack _playerAttack;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +11,8 @@ public class WeaponHitBox : MonoBehaviour
         {
             Enemy enemy = other.GetComponent<Enemy>();
             enemy.TakeDamage(_damage);
+            Debug.Log("충동직전");
+            _playerAttack.StartRecovery();
         }
     }
 }

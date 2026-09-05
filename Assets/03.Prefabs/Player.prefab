@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
   _animator: {fileID: -547150029759732115}
+  _recoveryDuration: 0.35
 --- !u!1 &1899517297787176915
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponHitBox
   _damage: 20
+  _playerAttack: {fileID: 6719730516335943558}
 --- !u!1 &3118534241210237809
 GameObject:
   m_ObjectHideFlags: 0
