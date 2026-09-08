@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     private bool _isHit = false;
     [SerializeField] private HitStop _hitstop;
     private Animator _animator;
+    private const float RotationOffest = 90f;
 
     private void Start()
     {
@@ -47,7 +48,11 @@ public class Enemy : MonoBehaviour
         bool isWalking = direction.magnitude > 0.1f;
         _animator.SetBool("IsWalking", isWalking);
 
-        transform.Translate(direction * _moveSpeed * Time.deltaTime);
+        float angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
+        // transform.Translate(direction * _moveSpeed * Time.deltaTime);
+        transform.position += direction * _moveSpeed * Time.deltaTime;
     }
 
     public void TakeDamage(int damage)
