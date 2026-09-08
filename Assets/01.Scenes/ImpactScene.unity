@@ -542,7 +542,7 @@ MonoBehaviour:
   _moveSpeed: 3
   _health: 100
   _hitStopTimer: 0.15
-  _knockBackPower: 5
+  _knockBackPower: 7
   _hitstop: {fileID: 850403872}
 --- !u!1001 &711131798
 PrefabInstance:

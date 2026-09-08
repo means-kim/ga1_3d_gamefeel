@@ -97,6 +97,6 @@ public class Enemy : MonoBehaviour
     {
         Vector3 direction = transform.position - _player.transform.position;
         direction.Normalize();
-        transform.Translate(direction * _knockBackPower * Time.deltaTime);
+        transform.position += direction * _knockBackPower * Time.deltaTime;
     }
 }
