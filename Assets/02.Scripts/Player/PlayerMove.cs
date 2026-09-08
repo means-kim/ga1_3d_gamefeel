@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float Speed;
+    [SerializeField] private Animator _animator;
 
 
     private void Update()
@@ -16,6 +17,9 @@ public class PlayerMove : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         Vector3 direction = new Vector3(h, 0f, v).normalized;
+        bool isRunning = direction.magnitude > 0.1f;
+        _animator.SetBool("IsRunning", isRunning);
+        // Debug.Log($"isRunning : {isRunning}");
 
         Vector3 normalizedSpeed = (direction * Speed).normalized;
 
