@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9b7e2a3f5fc449ca1821edc74ea53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitStop
-  _hitStopDuration: 0.05
+  _hitStopDuration: 0.1
 --- !u!4 &1121377078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400038, guid: ba24e610e0a338545b447ff44a3cf1cc, type: 3}
@@ -878,11 +878,7 @@ PrefabInstance:
       objectReference: {fileID: 850403872}
     - target: {fileID: 3625433144728926679, guid: 32ec1794383e6f8498d111bcd853baa2, type: 3}
       propertyPath: _hitStopTimer
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3625433144728926679, guid: 32ec1794383e6f8498d111bcd853baa2, type: 3}
-      propertyPath: _knockBackPower
-      value: 5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7743192540452360485, guid: 32ec1794383e6f8498d111bcd853baa2, type: 3}
       propertyPath: m_LocalPosition.x

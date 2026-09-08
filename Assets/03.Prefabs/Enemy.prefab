@@ -157,6 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   _moveSpeed: 3
   _health: 100
-  _hitStopTimer: 0
-  _knockBackPower: 1
+  _hitStopTimer: 1
+  _knockBackPower: 5
   _hitstop: {fileID: 0}

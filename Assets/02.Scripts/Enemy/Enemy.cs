@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _knockBackPower = 1f;
     private bool _isHit = false;
     [SerializeField] private HitStop _hitstop;
+
     private void Start()
     {
         _player = GameObject.FindWithTag("Player");
@@ -51,19 +52,21 @@ public class Enemy : MonoBehaviour
 
         _hitstop.ScreenStop();
 
+        _isHit = true;
+
         if (_health <= 0)
         {
             Destroy(gameObject);
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Sword"))
-        {
-            _isHit = true;
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.CompareTag("Sword"))
+    //     {
+    //         _isHit = true;
+    //     }
+    // }
 
     private void HitStun()
     {
