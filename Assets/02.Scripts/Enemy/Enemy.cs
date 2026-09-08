@@ -10,10 +10,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float _knockBackPower = 1f;
     private bool _isHit = false;
     [SerializeField] private HitStop _hitstop;
+    private Animator _animator;
 
     private void Start()
     {
         _player = GameObject.FindWithTag("Player");
+        _animator = GetComponent<Animator>();
 
         if (_player == null)
         {
@@ -42,6 +44,9 @@ public class Enemy : MonoBehaviour
     {
         Vector3 direction = _player.transform.position - transform.position;
         direction.Normalize();
+        bool isWalking = direction.magnitude > 0.1f;
+        _animator.SetBool("IsWalking", isWalking);
+
         transform.Translate(direction * _moveSpeed * Time.deltaTime);
     }
 
