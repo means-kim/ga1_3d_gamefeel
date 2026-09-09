@@ -1006,6 +1006,7 @@ MonoBehaviour:
   _damage: 20
   _playerAttack: {fileID: 711131802}
   _cameraShake: {fileID: 330585548}
+  _hitEffect: {fileID: 5880797563127281583, guid: 265d3a5ba69981a4698ceabcedf368b0, type: 3}
 --- !u!1001 &1443579287009017129
 PrefabInstance:
   m_ObjectHideFlags: 0
