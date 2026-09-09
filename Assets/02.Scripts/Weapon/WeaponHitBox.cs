@@ -6,6 +6,12 @@ public class WeaponHitBox : MonoBehaviour
     [SerializeField] private PlayerAttack _playerAttack;
     [SerializeField] private CameraShake _cameraShake;
     [SerializeField] private GameObject _hitEffect;
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +28,7 @@ public class WeaponHitBox : MonoBehaviour
 
     private void SpwanHitEffect()
     {
+        _audioSource.Play();
         Instantiate(_hitEffect, transform.position, Quaternion.identity);
     }
 }
