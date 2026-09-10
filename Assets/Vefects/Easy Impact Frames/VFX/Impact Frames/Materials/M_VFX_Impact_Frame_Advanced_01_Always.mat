@@ -25,11 +25,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _LUTColor:
-        m_Texture: {fileID: 2800000, guid: 9122da7abf15c1844a473f1c57a94be7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LUTCoreMask:
-        m_Texture: {fileID: 2800000, guid: 5d854fd5fdd884c4996fe18d62ecbaba, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTexture:
@@ -54,7 +54,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Boost: 10
+    - _Boost: 1
     - _ContrastErosion: 0
     - _ContrastErosionSmoothness: 0.1
     - _Cull: 2
@@ -63,7 +63,7 @@ Material:
     - _LUTColorLerp: 0
     - _LUTColorOffset: 0
     - _LUTColorSpeed: 0
-    - _LUTCoreAmplitude: 5
+    - _LUTCoreAmplitude: 100
     - _LUTCoreCanInvert: 1
     - _LUTCoreDistortAmount: 0.05
     - _LUTCoreLerp: 1
@@ -83,7 +83,7 @@ Material:
     - _RadialDistortionAmount: 0.01
     - _RadialDistortionCheapContrastLerp: 0
     - _RadialMask: 0
-    - _RadialMaskStrength: 1
+    - _RadialMaskStrength: 0.5
     - _ReceiveShadows: 0
     - _SphereMaskCenter: 27.8
     - _Src: 5
