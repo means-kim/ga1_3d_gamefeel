@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c70f9276edb614cb6adf624787d93325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraShake
-  _shakeDuration: 0.2
-  _shakePower: 0.2
+  _shakeDuration: 0.15
+  _shakePower: 0.15
 --- !u!114 &218437906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9b7e2a3f5fc449ca1821edc74ea53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitStop
-  _hitStopDuration: 0.1
+  _hitStopDuration: 0.15
 --- !u!4 &1178610419
 Transform:
   m_ObjectHideFlags: 0
@@ -793,7 +793,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2806377170882537601, guid: efd222fa6bd2f7d49b511c196cf0940e, type: 3}
       propertyPath: m_Name
-      value: Enemy_Custom
+      value: Player_Custom
       objectReference: {fileID: 0}
     - target: {fileID: 2806377170883032289, guid: efd222fa6bd2f7d49b511c196cf0940e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -856,9 +856,13 @@ PrefabInstance:
       propertyPath: _hitstop
       value: 
       objectReference: {fileID: 1178610418}
+    - target: {fileID: 195600927342836706, guid: 58f48cf31d29cc74881c5e76c1a19eee, type: 3}
+      propertyPath: _knockBackPower
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 604307278145708085, guid: 58f48cf31d29cc74881c5e76c1a19eee, type: 3}
       propertyPath: m_Name
-      value: Player_Custom
+      value: Enemy_Custom
       objectReference: {fileID: 0}
     - target: {fileID: 4304893235086114638, guid: 58f48cf31d29cc74881c5e76c1a19eee, type: 3}
       propertyPath: m_LocalPosition.x
