@@ -1024,6 +1024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   _player: {fileID: 711131803}
   _offset: {x: 0, y: 0, z: 0}
+  _mouseSensitivity: 5
 --- !u!1001 &1642543968
 PrefabInstance:
   m_ObjectHideFlags: 0
